@@ -21,6 +21,11 @@
         } else {
           selectPrompt = 'Choose...';
         }
+        if (select.data('position')) {
+          selectPosition = select.data('position');
+        } else {
+          selectPosition = '';
+        }
         select.find('option').each( function () {
           if ($(this).attr('selected')) {
             selected = 'selected';
@@ -32,8 +37,8 @@
           options += '<li data-value="' + this.value + '" class="' + translateClasses + selected + '"><span class="option-title">' + $(this).html() + '</span></li>';
           selected = '';
         });
-        newButton = '<div class="custom-dropdown-area" data-orig-select="#' + selectId + '"' + (multiple ? ' data-multiple="true"' : '') + '><a href="#" data-dropdown="select-' + selectId + '" class="custom-dropdown-button">' + selectPrompt + '</a> \
-        <ul id="select-' + selectId + '" class="f-dropdown custom-dropdown-options" data-dropdown-content> \
+        newButton = '<div class="custom-dropdown-area" data-orig-select="#' + selectId + '"' + (multiple ? ' data-multiple="true"' : '') + '><a href="#" data-toggle="select-' + selectId + '" class="custom-dropdown-button">' + selectPrompt + '</a> \
+        <ul id="select-' + selectId + '" class="dropdown-pane custom-dropdown-options' + selectPosition + '" data-dropdown> \
           ' + options + ' \
         </ul></div>';
         select.hide();
@@ -74,7 +79,7 @@
       }
     }else{
       dropdown.find('li').removeClass('selected');
-      Foundation.libs.dropdown.close($('#'+dropdown.find('ul').attr('id')));
+      $('#'+dropdown.find('ul').attr('id')).foundation.('close');
       origDropdown.val(value).change();
       $(this).toggleClass('selected');
       dropdown.find('.custom-dropdown-button').html(text);
