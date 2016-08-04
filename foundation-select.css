@@ -42,6 +42,10 @@
   cursor: default;
 }
 
+.dropdown-pane.custom-dropdown-options{
+  fount-size: 1rem;
+}
+
 .custom-dropdown-options {
   background-color: #fafafa;
   border-top: 0;
