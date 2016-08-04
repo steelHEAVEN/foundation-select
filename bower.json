@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "jquery": ">=1.4.4",
-    "foundation": "^6.0.0"
+    "foundation-sites": "^6.0.0"
   },
   "devDependencies": []
 }
