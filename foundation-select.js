@@ -79,7 +79,7 @@
       }
     }else{
       dropdown.find('li').removeClass('selected');
-      $('#'+dropdown.find('ul').attr('id')).foundation.('close');
+      $('#'+dropdown.find('ul').attr('id')).foundation('close');
       origDropdown.val(value).change();
       $(this).toggleClass('selected');
       dropdown.find('.custom-dropdown-button').html(text);
