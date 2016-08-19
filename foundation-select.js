@@ -36,7 +36,7 @@
           options += '<li data-value="' + this.value + '" class="' + translateClasses + selected + '"><span class="option-title">' + $(this).html() + '</span></li>';
           selected = '';
         });
-        var newButton = '<div class="custom-dropdown-area" data-orig-select="#' + selectId + '"' + (multiple ? ' data-multiple="true"' : '') + '><a href="#" data-toggle="select-' + selectId + '" class="custom-dropdown-button">' + selectPrompt + '</a> \
+        var newButton = '<div class="custom-dropdown-area" data-orig-select="#' + selectId + '"' + (multiple ? ' data-multiple="true"' : '') + '><button type="button" data-toggle="select-' + selectId + '" class="custom-dropdown-button">' + selectPrompt + '</button> \
         <ul id="select-' + selectId + '" class="dropdown-pane custom-dropdown-options' + selectPosition + '" data-dropdown> \
           ' + options + ' \
         </ul></div>';
