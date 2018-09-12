@@ -1,0 +1,20 @@
+{
+  "name": "foundation-select",
+  "version": "0.2.0",
+  "description": "jQuery plugin for custom <select> inputs in Zurb Foundation 6 using Foundation Dropdowns plugin for compatibility.",
+  "main": "foundation-select.js",
+  "directories": {
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tazeverywhere/foundation-select.git"
+  },
+  "author": "Colin Duwe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tazeverywhere/foundation-select/issues"
+  },
+  "homepage": "https://github.com/tazeverywhere/foundation-select/#readme"
+}
